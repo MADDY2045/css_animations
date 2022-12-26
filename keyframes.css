@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  position: relative;
+  animation-name: my-animation;
+  animation-duration: 4s; /*Trigger the animation*/
+  animation-iteration-count: 2; /* no of times need to show the animation raneg from 1 to infinite*/
+  animation-fill-mode: forwards; /*retains/carry forwards the last animated keyframe*/
+  animation-delay: 2s; /*Delays the start of animation*/
+  animation-direction: alternate; /*Direction of the animation*/
+  animation-timing-function: ease-in-out; /*pattern of displaying*/
+}
+
+@keyframes my-animation {
+  0% {
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    border-radius: 0 0 0 0;
+  }
+  25% {
+    background: pink;
+    left: 150px;
+    top: 0px;
+    border-radius: 50% 0 0 0;
+  }
+  50% {
+    background: greenyellow;
+    left: 150px;
+    top: 150px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background: blue;
+    left: 0px;
+    top: 150px;
+    border-radius: 50% 50% 50% 0;
+  }
+  100% {
+    background: #fff;
+    left: 0px;
+    top: 0;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
